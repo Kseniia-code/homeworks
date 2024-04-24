@@ -5,9 +5,9 @@ function pad(row, symbol, number, addToStart) {
    if (symbol === null){
     return row;
    }
-    let numberOfSymbols = number-row.length;
+    let numberOfSymbols = number-row.length;        //визначаємо кількість символів, яку треба додати
     for (i = 0; i < (numberOfSymbols); i++) {
-        if (addToStart == true) {
+        if (addToStart == true) {                   //визначаємо, куди проводиться вставка: в початок строки, або в кінець
             row = symbol + row;
         } else {
             row = row + symbol;
