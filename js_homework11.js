@@ -14,19 +14,19 @@ const clock = {
     }
 };
 //Задаємо функцію, яка буде перевіряти і виводити значення об'єкту в форматі "key: value"
-function printFullObject(fullObject) {
-    Object.keys(fullObject).forEach(key => {
+function printFullObject(fullObject, prefix = '') { 
+    for (let key in fullObject) {
         let value = fullObject[key];
         if (typeof value === 'function') {
-            return;                         //Преривання поточної ітерації, якщо поточне значення є функцією
+            continue;                         //Преривання поточної ітерації, якщо поточне значення є функцією
         }
         if (typeof value === 'object') {
-            console.log(key);
-            printFullObject(value);             //Використовуємо рекурсію для визову функції
+            console.log(prefix + key);
+            printFullObject(value, '    ');             //Використовуємо рекурсію для визову функції
         } else {
-            console.log(key + ": " + value);
+            console.log(prefix + key + ": " + value);
         }
-    });
+    };
 };
 
 clock.getInfo();
