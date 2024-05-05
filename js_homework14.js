@@ -40,7 +40,7 @@ const company = {
         }
     ],
     findBy: function (companyName) {
-        var result = find(this.clients, companyName);
+        let result = find(this.clients, companyName);
         if (result != null) {       // Якщо щось знайдено рекурсивним пошуком - виводимо результат
             console.log("Знайдено компанію:");
             console.log("Назва: " + result.name);
@@ -57,7 +57,7 @@ const company = {
 // Рекурсивна функція пошуку в компаніях
 function find(clients, companyName) {
     for (let client of clients) {
-        var result = null;
+        let result = null;
         if (client.name === companyName) {      // Пошук за іменем компанії
             result = client;
         }
