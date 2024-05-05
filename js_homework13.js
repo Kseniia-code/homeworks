@@ -6,7 +6,7 @@ function myBlend(arr) {
         let secondElementPosition = Math.floor(Math.random() * (arr.length - 0) + 0);
         const firstElement = arr[firstElementPosition];     //Зберігаємо значення елемента масиву в змінну
         const secondElement = arr[secondElementPosition];
-        arr[firstElementPosition] = secondElement;      //Міняємо місцями перший та другий елементи масива
+        arr[firstElementPosition] = secondElement;      //Міняємо місцями елементи масива
         arr[secondElementPosition] = firstElement;
     }
 }
